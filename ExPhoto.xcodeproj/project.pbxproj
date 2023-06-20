@@ -17,6 +17,7 @@
 		4A66B4D12A42080F004F6E13 /* ExPhotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66B4D02A42080F004F6E13 /* ExPhotoUITests.swift */; };
 		4A66B4D32A42080F004F6E13 /* ExPhotoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66B4D22A42080F004F6E13 /* ExPhotoUITestsLaunchTests.swift */; };
 		4A66B4E02A420865004F6E13 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66B4DF2A420865004F6E13 /* PhotoService.swift */; };
+		4A66B4E52A420978004F6E13 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66B4E42A420978004F6E13 /* AlbumViewController.swift */; };
 		5FA050B42F4F700ACAE939BD /* Pods_ExPhoto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE86BE7BC2B560C34A6AC89 /* Pods_ExPhoto.framework */; };
 		5FC0B61E38A0CD73A82B6670 /* Pods_ExPhoto_ExPhotoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2EF88915EBED1D636836BC /* Pods_ExPhoto_ExPhotoUITests.framework */; };
 		D636F37BC04C0D3AE8633A1C /* Pods_ExPhotoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFA107E94B6DC234D6DE5F0 /* Pods_ExPhotoTests.framework */; };
@@ -55,6 +56,7 @@
 		4A66B4D02A42080F004F6E13 /* ExPhotoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExPhotoUITests.swift; sourceTree = "<group>"; };
 		4A66B4D22A42080F004F6E13 /* ExPhotoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExPhotoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4A66B4DF2A420865004F6E13 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		4A66B4E42A420978004F6E13 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		5F9DE0BC602E6FAFF56F2A4F /* Pods-ExPhoto-ExPhotoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPhoto-ExPhotoUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExPhoto-ExPhotoUITests/Pods-ExPhoto-ExPhotoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6B2EF88915EBED1D636836BC /* Pods_ExPhoto_ExPhotoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExPhoto_ExPhotoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA20478E439ED24F3F51BCD /* Pods-ExPhoto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPhoto.release.xcconfig"; path = "Target Support Files/Pods-ExPhoto/Pods-ExPhoto.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,10 +130,11 @@
 		4A66B4AE2A42080E004F6E13 /* ExPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				4A66B4E32A42096B004F6E13 /* Views */,
+				4A66B4E22A420969004F6E13 /* Service */,
 				4A66B4AF2A42080E004F6E13 /* AppDelegate.swift */,
 				4A66B4B12A42080E004F6E13 /* SceneDelegate.swift */,
 				4A66B4B32A42080E004F6E13 /* ViewController.swift */,
-				4A66B4DF2A420865004F6E13 /* PhotoService.swift */,
 				4A66B4B52A42080E004F6E13 /* Main.storyboard */,
 				4A66B4B82A42080F004F6E13 /* Assets.xcassets */,
 				4A66B4BA2A42080F004F6E13 /* LaunchScreen.storyboard */,
@@ -155,6 +158,22 @@
 				4A66B4D22A42080F004F6E13 /* ExPhotoUITestsLaunchTests.swift */,
 			);
 			path = ExPhotoUITests;
+			sourceTree = "<group>";
+		};
+		4A66B4E22A420969004F6E13 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4A66B4DF2A420865004F6E13 /* PhotoService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4A66B4E32A42096B004F6E13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A66B4E42A420978004F6E13 /* AlbumViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9DCAD2A7F8A3B48EA82BB13F /* Pods */ = {
@@ -410,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A66B4E02A420865004F6E13 /* PhotoService.swift in Sources */,
+				4A66B4E52A420978004F6E13 /* AlbumViewController.swift in Sources */,
 				4A66B4B42A42080E004F6E13 /* ViewController.swift in Sources */,
 				4A66B4B02A42080E004F6E13 /* AppDelegate.swift in Sources */,
 				4A66B4B22A42080E004F6E13 /* SceneDelegate.swift in Sources */,

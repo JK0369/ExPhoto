@@ -10,6 +10,13 @@ import UIKit
 
 protocol PhotoService {
     var authorizationStatus: PHAuthorizationStatus { get }
+    var isAuthorizationLimited: Bool { get }
     
     func requestAuthorization()
+}
+
+extension PhotoService {
+    var isAuthorizationLimited: Bool {
+        authorizationStatus == .limited
+    }
 }
