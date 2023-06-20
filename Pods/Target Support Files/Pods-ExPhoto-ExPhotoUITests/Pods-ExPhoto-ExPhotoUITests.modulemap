@@ -1,0 +1,6 @@
+framework module Pods_ExPhoto_ExPhotoUITests {
+  umbrella header "Pods-ExPhoto-ExPhotoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

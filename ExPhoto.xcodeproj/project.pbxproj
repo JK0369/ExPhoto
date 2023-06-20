@@ -1,0 +1,765 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A66B4B02A42080E004F6E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66B4AF2A42080E004F6E13 /* AppDelegate.swift */; };
+		4A66B4B22A42080E004F6E13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66B4B12A42080E004F6E13 /* SceneDelegate.swift */; };
+		4A66B4B42A42080E004F6E13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66B4B32A42080E004F6E13 /* ViewController.swift */; };
+		4A66B4B72A42080E004F6E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A66B4B52A42080E004F6E13 /* Main.storyboard */; };
+		4A66B4B92A42080F004F6E13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A66B4B82A42080F004F6E13 /* Assets.xcassets */; };
+		4A66B4BC2A42080F004F6E13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A66B4BA2A42080F004F6E13 /* LaunchScreen.storyboard */; };
+		4A66B4C72A42080F004F6E13 /* ExPhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66B4C62A42080F004F6E13 /* ExPhotoTests.swift */; };
+		4A66B4D12A42080F004F6E13 /* ExPhotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66B4D02A42080F004F6E13 /* ExPhotoUITests.swift */; };
+		4A66B4D32A42080F004F6E13 /* ExPhotoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66B4D22A42080F004F6E13 /* ExPhotoUITestsLaunchTests.swift */; };
+		4A66B4E02A420865004F6E13 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66B4DF2A420865004F6E13 /* PhotoService.swift */; };
+		5FA050B42F4F700ACAE939BD /* Pods_ExPhoto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE86BE7BC2B560C34A6AC89 /* Pods_ExPhoto.framework */; };
+		5FC0B61E38A0CD73A82B6670 /* Pods_ExPhoto_ExPhotoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2EF88915EBED1D636836BC /* Pods_ExPhoto_ExPhotoUITests.framework */; };
+		D636F37BC04C0D3AE8633A1C /* Pods_ExPhotoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFA107E94B6DC234D6DE5F0 /* Pods_ExPhotoTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A66B4C32A42080F004F6E13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A66B4A42A42080E004F6E13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A66B4AB2A42080E004F6E13;
+			remoteInfo = ExPhoto;
+		};
+		4A66B4CD2A42080F004F6E13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A66B4A42A42080E004F6E13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A66B4AB2A42080E004F6E13;
+			remoteInfo = ExPhoto;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		195C08C07D5845848E4BDC64 /* Pods-ExPhoto-ExPhotoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPhoto-ExPhotoUITests.release.xcconfig"; path = "Target Support Files/Pods-ExPhoto-ExPhotoUITests/Pods-ExPhoto-ExPhotoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4A66B4AC2A42080E004F6E13 /* ExPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A66B4AF2A42080E004F6E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A66B4B12A42080E004F6E13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4A66B4B32A42080E004F6E13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A66B4B62A42080E004F6E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A66B4B82A42080F004F6E13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A66B4BB2A42080F004F6E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A66B4BD2A42080F004F6E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A66B4C22A42080F004F6E13 /* ExPhotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExPhotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A66B4C62A42080F004F6E13 /* ExPhotoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExPhotoTests.swift; sourceTree = "<group>"; };
+		4A66B4CC2A42080F004F6E13 /* ExPhotoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExPhotoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A66B4D02A42080F004F6E13 /* ExPhotoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExPhotoUITests.swift; sourceTree = "<group>"; };
+		4A66B4D22A42080F004F6E13 /* ExPhotoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExPhotoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4A66B4DF2A420865004F6E13 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		5F9DE0BC602E6FAFF56F2A4F /* Pods-ExPhoto-ExPhotoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPhoto-ExPhotoUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExPhoto-ExPhotoUITests/Pods-ExPhoto-ExPhotoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B2EF88915EBED1D636836BC /* Pods_ExPhoto_ExPhotoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExPhoto_ExPhotoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CA20478E439ED24F3F51BCD /* Pods-ExPhoto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPhoto.release.xcconfig"; path = "Target Support Files/Pods-ExPhoto/Pods-ExPhoto.release.xcconfig"; sourceTree = "<group>"; };
+		A94755E75803DAD85AD27527 /* Pods-ExPhoto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPhoto.debug.xcconfig"; path = "Target Support Files/Pods-ExPhoto/Pods-ExPhoto.debug.xcconfig"; sourceTree = "<group>"; };
+		C5553D18DCB6B2C6A31C0FE2 /* Pods-ExPhotoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPhotoTests.release.xcconfig"; path = "Target Support Files/Pods-ExPhotoTests/Pods-ExPhotoTests.release.xcconfig"; sourceTree = "<group>"; };
+		CDE86BE7BC2B560C34A6AC89 /* Pods_ExPhoto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExPhoto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDFA107E94B6DC234D6DE5F0 /* Pods_ExPhotoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExPhotoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE4E67FA617941892BF8CFC3 /* Pods-ExPhotoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExPhotoTests.debug.xcconfig"; path = "Target Support Files/Pods-ExPhotoTests/Pods-ExPhotoTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A66B4A92A42080E004F6E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FA050B42F4F700ACAE939BD /* Pods_ExPhoto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A66B4BF2A42080F004F6E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D636F37BC04C0D3AE8633A1C /* Pods_ExPhotoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A66B4C92A42080F004F6E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FC0B61E38A0CD73A82B6670 /* Pods_ExPhoto_ExPhotoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A5DC2E6955BA3A861E039DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDE86BE7BC2B560C34A6AC89 /* Pods_ExPhoto.framework */,
+				6B2EF88915EBED1D636836BC /* Pods_ExPhoto_ExPhotoUITests.framework */,
+				DDFA107E94B6DC234D6DE5F0 /* Pods_ExPhotoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A66B4A32A42080E004F6E13 = {
+			isa = PBXGroup;
+			children = (
+				4A66B4AE2A42080E004F6E13 /* ExPhoto */,
+				4A66B4C52A42080F004F6E13 /* ExPhotoTests */,
+				4A66B4CF2A42080F004F6E13 /* ExPhotoUITests */,
+				4A66B4AD2A42080E004F6E13 /* Products */,
+				9DCAD2A7F8A3B48EA82BB13F /* Pods */,
+				4A5DC2E6955BA3A861E039DD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4A66B4AD2A42080E004F6E13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A66B4AC2A42080E004F6E13 /* ExPhoto.app */,
+				4A66B4C22A42080F004F6E13 /* ExPhotoTests.xctest */,
+				4A66B4CC2A42080F004F6E13 /* ExPhotoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A66B4AE2A42080E004F6E13 /* ExPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				4A66B4AF2A42080E004F6E13 /* AppDelegate.swift */,
+				4A66B4B12A42080E004F6E13 /* SceneDelegate.swift */,
+				4A66B4B32A42080E004F6E13 /* ViewController.swift */,
+				4A66B4DF2A420865004F6E13 /* PhotoService.swift */,
+				4A66B4B52A42080E004F6E13 /* Main.storyboard */,
+				4A66B4B82A42080F004F6E13 /* Assets.xcassets */,
+				4A66B4BA2A42080F004F6E13 /* LaunchScreen.storyboard */,
+				4A66B4BD2A42080F004F6E13 /* Info.plist */,
+			);
+			path = ExPhoto;
+			sourceTree = "<group>";
+		};
+		4A66B4C52A42080F004F6E13 /* ExPhotoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A66B4C62A42080F004F6E13 /* ExPhotoTests.swift */,
+			);
+			path = ExPhotoTests;
+			sourceTree = "<group>";
+		};
+		4A66B4CF2A42080F004F6E13 /* ExPhotoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4A66B4D02A42080F004F6E13 /* ExPhotoUITests.swift */,
+				4A66B4D22A42080F004F6E13 /* ExPhotoUITestsLaunchTests.swift */,
+			);
+			path = ExPhotoUITests;
+			sourceTree = "<group>";
+		};
+		9DCAD2A7F8A3B48EA82BB13F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A94755E75803DAD85AD27527 /* Pods-ExPhoto.debug.xcconfig */,
+				8CA20478E439ED24F3F51BCD /* Pods-ExPhoto.release.xcconfig */,
+				5F9DE0BC602E6FAFF56F2A4F /* Pods-ExPhoto-ExPhotoUITests.debug.xcconfig */,
+				195C08C07D5845848E4BDC64 /* Pods-ExPhoto-ExPhotoUITests.release.xcconfig */,
+				FE4E67FA617941892BF8CFC3 /* Pods-ExPhotoTests.debug.xcconfig */,
+				C5553D18DCB6B2C6A31C0FE2 /* Pods-ExPhotoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A66B4AB2A42080E004F6E13 /* ExPhoto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A66B4D62A42080F004F6E13 /* Build configuration list for PBXNativeTarget "ExPhoto" */;
+			buildPhases = (
+				5EC3476D70620CFFC82F96F6 /* [CP] Check Pods Manifest.lock */,
+				4A66B4A82A42080E004F6E13 /* Sources */,
+				4A66B4A92A42080E004F6E13 /* Frameworks */,
+				4A66B4AA2A42080E004F6E13 /* Resources */,
+				632A0F0465511476C8A7A21E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExPhoto;
+			productName = ExPhoto;
+			productReference = 4A66B4AC2A42080E004F6E13 /* ExPhoto.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A66B4C12A42080F004F6E13 /* ExPhotoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A66B4D92A42080F004F6E13 /* Build configuration list for PBXNativeTarget "ExPhotoTests" */;
+			buildPhases = (
+				3AF23D454B89BAA1C05A3F1C /* [CP] Check Pods Manifest.lock */,
+				4A66B4BE2A42080F004F6E13 /* Sources */,
+				4A66B4BF2A42080F004F6E13 /* Frameworks */,
+				4A66B4C02A42080F004F6E13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A66B4C42A42080F004F6E13 /* PBXTargetDependency */,
+			);
+			name = ExPhotoTests;
+			productName = ExPhotoTests;
+			productReference = 4A66B4C22A42080F004F6E13 /* ExPhotoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4A66B4CB2A42080F004F6E13 /* ExPhotoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A66B4DC2A42080F004F6E13 /* Build configuration list for PBXNativeTarget "ExPhotoUITests" */;
+			buildPhases = (
+				1BF9683DE9D16A6A5F0E2EA2 /* [CP] Check Pods Manifest.lock */,
+				4A66B4C82A42080F004F6E13 /* Sources */,
+				4A66B4C92A42080F004F6E13 /* Frameworks */,
+				4A66B4CA2A42080F004F6E13 /* Resources */,
+				002F78B37B5E496171CEE52B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A66B4CE2A42080F004F6E13 /* PBXTargetDependency */,
+			);
+			name = ExPhotoUITests;
+			productName = ExPhotoUITests;
+			productReference = 4A66B4CC2A42080F004F6E13 /* ExPhotoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A66B4A42A42080E004F6E13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					4A66B4AB2A42080E004F6E13 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					4A66B4C12A42080F004F6E13 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 4A66B4AB2A42080E004F6E13;
+					};
+					4A66B4CB2A42080F004F6E13 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 4A66B4AB2A42080E004F6E13;
+					};
+				};
+			};
+			buildConfigurationList = 4A66B4A72A42080E004F6E13 /* Build configuration list for PBXProject "ExPhoto" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A66B4A32A42080E004F6E13;
+			productRefGroup = 4A66B4AD2A42080E004F6E13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A66B4AB2A42080E004F6E13 /* ExPhoto */,
+				4A66B4C12A42080F004F6E13 /* ExPhotoTests */,
+				4A66B4CB2A42080F004F6E13 /* ExPhotoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A66B4AA2A42080E004F6E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A66B4BC2A42080F004F6E13 /* LaunchScreen.storyboard in Resources */,
+				4A66B4B92A42080F004F6E13 /* Assets.xcassets in Resources */,
+				4A66B4B72A42080E004F6E13 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A66B4C02A42080F004F6E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A66B4CA2A42080F004F6E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		002F78B37B5E496171CEE52B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExPhoto-ExPhotoUITests/Pods-ExPhoto-ExPhotoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExPhoto-ExPhotoUITests/Pods-ExPhoto-ExPhotoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExPhoto-ExPhotoUITests/Pods-ExPhoto-ExPhotoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BF9683DE9D16A6A5F0E2EA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExPhoto-ExPhotoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AF23D454B89BAA1C05A3F1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExPhotoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EC3476D70620CFFC82F96F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExPhoto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		632A0F0465511476C8A7A21E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExPhoto/Pods-ExPhoto-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExPhoto/Pods-ExPhoto-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExPhoto/Pods-ExPhoto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A66B4A82A42080E004F6E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A66B4E02A420865004F6E13 /* PhotoService.swift in Sources */,
+				4A66B4B42A42080E004F6E13 /* ViewController.swift in Sources */,
+				4A66B4B02A42080E004F6E13 /* AppDelegate.swift in Sources */,
+				4A66B4B22A42080E004F6E13 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A66B4BE2A42080F004F6E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A66B4C72A42080F004F6E13 /* ExPhotoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A66B4C82A42080F004F6E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A66B4D32A42080F004F6E13 /* ExPhotoUITestsLaunchTests.swift in Sources */,
+				4A66B4D12A42080F004F6E13 /* ExPhotoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A66B4C42A42080F004F6E13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A66B4AB2A42080E004F6E13 /* ExPhoto */;
+			targetProxy = 4A66B4C32A42080F004F6E13 /* PBXContainerItemProxy */;
+		};
+		4A66B4CE2A42080F004F6E13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A66B4AB2A42080E004F6E13 /* ExPhoto */;
+			targetProxy = 4A66B4CD2A42080F004F6E13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A66B4B52A42080E004F6E13 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A66B4B62A42080E004F6E13 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4A66B4BA2A42080F004F6E13 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A66B4BB2A42080F004F6E13 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A66B4D42A42080F004F6E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4A66B4D52A42080F004F6E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A66B4D72A42080F004F6E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A94755E75803DAD85AD27527 /* Pods-ExPhoto.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SS7U83UJNK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExPhoto/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ExPhoto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A66B4D82A42080F004F6E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CA20478E439ED24F3F51BCD /* Pods-ExPhoto.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SS7U83UJNK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExPhoto/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ExPhoto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4A66B4DA2A42080F004F6E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE4E67FA617941892BF8CFC3 /* Pods-ExPhotoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SS7U83UJNK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ExPhotoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExPhoto.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ExPhoto";
+			};
+			name = Debug;
+		};
+		4A66B4DB2A42080F004F6E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5553D18DCB6B2C6A31C0FE2 /* Pods-ExPhotoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SS7U83UJNK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ExPhotoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExPhoto.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ExPhoto";
+			};
+			name = Release;
+		};
+		4A66B4DD2A42080F004F6E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F9DE0BC602E6FAFF56F2A4F /* Pods-ExPhoto-ExPhotoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SS7U83UJNK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ExPhotoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ExPhoto;
+			};
+			name = Debug;
+		};
+		4A66B4DE2A42080F004F6E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195C08C07D5845848E4BDC64 /* Pods-ExPhoto-ExPhotoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SS7U83UJNK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jake.ExPhotoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ExPhoto;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A66B4A72A42080E004F6E13 /* Build configuration list for PBXProject "ExPhoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A66B4D42A42080F004F6E13 /* Debug */,
+				4A66B4D52A42080F004F6E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A66B4D62A42080F004F6E13 /* Build configuration list for PBXNativeTarget "ExPhoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A66B4D72A42080F004F6E13 /* Debug */,
+				4A66B4D82A42080F004F6E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A66B4D92A42080F004F6E13 /* Build configuration list for PBXNativeTarget "ExPhotoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A66B4DA2A42080F004F6E13 /* Debug */,
+				4A66B4DB2A42080F004F6E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A66B4DC2A42080F004F6E13 /* Build configuration list for PBXNativeTarget "ExPhotoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A66B4DD2A42080F004F6E13 /* Debug */,
+				4A66B4DE2A42080F004F6E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A66B4A42A42080E004F6E13 /* Project object */;
+}
