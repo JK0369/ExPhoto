@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         $0.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
     }
     
+    private let authService: PhotoAuthService = MyPhotoAuthService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,9 +30,18 @@ class ViewController: UIViewController {
     }
     
     @objc private func didTapButton() {
-        let vc = AlbumViewController().then {
-            $0.modalPresentationStyle = .fullScreen
+        authService.requestAuthorization { [weak self] result in
+            guard let self else { return }
+            
+            switch result {
+            case .success:
+                let vc = PhotoViewController().then {
+                    $0.modalPresentationStyle = .fullScreen
+                }
+                present(vc, animated: true)
+            case .failure:
+                return
+            }
         }
-        present(vc, animated: true)
     }
 }
