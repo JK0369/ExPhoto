@@ -41,10 +41,11 @@ final class PhotoViewController: UIViewController {
     // MARK: Property
     private let albumService: AlbumService = MyAlbumService()
     private let photoService: PhotoService = MyPhotoService()
+    private var selectedCount = 0
     
     // album 여러개에 대한 예시는 생략 (UIPickerView와 같은 것을 이용하여 currentAlbumIndex를 바꾸어주면 됨)
     private var albums = [PHFetchResult<PHAsset>]()
-    private var phAssets = [PHAsset]()
+    private var dataSource = [PhotoCellInfo]()
     private var currentAlbumIndex = 0 {
         didSet { loadImages() }
     }
@@ -61,6 +62,7 @@ final class PhotoViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = .white
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
@@ -79,7 +81,7 @@ final class PhotoViewController: UIViewController {
         guard currentAlbumIndex < albums.count else { return }
         let album = albums[currentAlbumIndex]
         photoService.convertAlbumToPHAssets(album: album) { [weak self] phAssets in
-            self?.phAssets = phAssets
+            self?.dataSource = phAssets.map { .init(phAsset: $0, image: nil, selectedOrder: .none) }
             self?.collectionView.reloadData()
         }
     }
@@ -87,14 +89,15 @@ final class PhotoViewController: UIViewController {
 
 extension PhotoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        phAssets.count
+        dataSource.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.id, for: indexPath) as? PhotoCell
         else { return UICollectionViewCell() }
         
-        let phAsset = phAssets[indexPath.item]
+        let imageInfo = dataSource[indexPath.item]
+        let phAsset = imageInfo.phAsset
         let imageSize = CGSize(width: Const.cellSize.width * Const.scale, height: Const.cellSize.height * Const.scale)
         
         photoService.fetchImage(
@@ -102,9 +105,27 @@ extension PhotoViewController: UICollectionViewDataSource {
             size: imageSize,
             contentMode: .aspectFit,
             completion: { [weak cell] image in
-                cell?.prepare(image: image)
+                cell?.prepare(info: .init(phAsset: phAsset, image: image, selectedOrder: imageInfo.selectedOrder))
             }
         )
         return cell
+    }
+}
+
+extension PhotoViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let info = dataSource[indexPath.item]
+        
+        if case .selected = info.selectedOrder {
+            dataSource[indexPath.item] = .init(phAsset: info.phAsset, image: info.image, selectedOrder: .none)
+            selectedCount -= 1
+        } else {
+            selectedCount += 1
+            dataSource[indexPath.item] = .init(phAsset: info.phAsset, image: info.image, selectedOrder: .selected(selectedCount))
+        }
+        
+        collectionView.performBatchUpdates {
+            collectionView.reloadItems(at: [indexPath])
+        }
     }
 }
