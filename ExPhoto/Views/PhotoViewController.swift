@@ -132,7 +132,8 @@ extension PhotoViewController: UICollectionViewDelegate {
             updatingIndexPaths = [indexPath] + selectedIndexArray
                 .map { IndexPath(row: $0, section: 0) }
         } else {
-            selectedIndexArray.append(indexPath.item)
+            selectedIndexArray
+                .append(indexPath.item)
             
             selectedIndexArray
                 .enumerated()
