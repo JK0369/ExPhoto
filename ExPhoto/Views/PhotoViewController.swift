@@ -20,6 +20,11 @@ final class PhotoViewController: UIViewController {
     }
     
     // MARK: UI
+    private let submitButton = UIButton(type: .system).then {
+        $0.setTitle("완료", for: .normal)
+        $0.setTitleColor(.blue, for: .normal)
+        $0.setTitleColor(.systemBlue, for: [.normal, .highlighted])
+    }
     private let collectionView = UICollectionView(
         frame: .zero,
         collectionViewLayout: UICollectionViewFlowLayout().then {
@@ -64,9 +69,16 @@ final class PhotoViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        view.addSubview(submitButton)
+        submitButton.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            $0.centerX.equalToSuperview()
+        }
+        
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalTo(submitButton.snp.bottom)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
     }
     
