@@ -41,7 +41,7 @@ final class PhotoViewController: UIViewController {
     // MARK: Property
     private let albumService: AlbumService = MyAlbumService()
     private let photoService: PhotoService = MyPhotoService()
-    private var selectedCount = 0
+    private var selectedIndexArray = [Int]() // Index: count
     
     // album 여러개에 대한 예시는 생략 (UIPickerView와 같은 것을 이용하여 currentAlbumIndex를 바꾸어주면 됨)
     private var albums = [PHFetchResult<PHAsset>]()
@@ -95,7 +95,6 @@ extension PhotoViewController: UICollectionViewDataSource {
         guard
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.id, for: indexPath) as? PhotoCell
         else { return UICollectionViewCell() }
-        
         let imageInfo = dataSource[indexPath.item]
         let phAsset = imageInfo.phAsset
         let imageSize = CGSize(width: Const.cellSize.width * Const.scale, height: Const.cellSize.height * Const.scale)
@@ -115,17 +114,44 @@ extension PhotoViewController: UICollectionViewDataSource {
 extension PhotoViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let info = dataSource[indexPath.item]
+        let updatingIndexPaths: [IndexPath]
         
         if case .selected = info.selectedOrder {
             dataSource[indexPath.item] = .init(phAsset: info.phAsset, image: info.image, selectedOrder: .none)
-            selectedCount -= 1
+            
+            selectedIndexArray
+                .removeAll(where: { $0 == indexPath.item })
+            
+            selectedIndexArray
+                .enumerated()
+                .forEach { order, index in
+                    let order = order + 1
+                    let prev = dataSource[index]
+                    dataSource[index] = .init(phAsset: prev.phAsset, image: prev.image, selectedOrder: .selected(order))
+                }
+            updatingIndexPaths = [indexPath] + selectedIndexArray
+                .map { IndexPath(row: $0, section: 0) }
         } else {
-            selectedCount += 1
-            dataSource[indexPath.item] = .init(phAsset: info.phAsset, image: info.image, selectedOrder: .selected(selectedCount))
+            selectedIndexArray.append(indexPath.item)
+            
+            selectedIndexArray
+                .enumerated()
+                .forEach { order, selectedIndex in
+                    let order = order + 1
+                    let prev = dataSource[selectedIndex]
+                    dataSource[selectedIndex] = .init(phAsset: prev.phAsset, image: prev.image, selectedOrder: .selected(order))
+                }
+            
+            updatingIndexPaths = selectedIndexArray
+                .map { IndexPath(row: $0, section: 0) }
         }
         
+        update(indexPaths: updatingIndexPaths)
+    }
+    
+    private func update(indexPaths: [IndexPath]) {
         collectionView.performBatchUpdates {
-            collectionView.reloadItems(at: [indexPath])
+            collectionView.reloadItems(at: indexPaths)
         }
     }
 }
